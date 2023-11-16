@@ -1,2 +1,2 @@
 # ap-cs-project-site
-AP CS with projects done
+Some project I've done in AP CS
