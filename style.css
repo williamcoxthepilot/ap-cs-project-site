@@ -15,7 +15,6 @@ html {
 }
 
 body {
-  /* background-image: url('img/backgroundimage/190738-dark-blue-gradient-background.jpg'); */
   background-color: #91908c;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,7 +44,8 @@ header nav ul li {
 }
 
 a {
-  color: rgb(7, 157, 187);
+  color: rgb(7, 67, 187);
+  font-family: Bungeeregular;
 }
 
 a:hover {
@@ -79,7 +79,7 @@ a:hover {
 
 .project img,
 #aboutme img {
-  width: 250px;
+  width: 300px;
   float: left;
   margin-right: 10px;
   margin-bottom: 10px;
