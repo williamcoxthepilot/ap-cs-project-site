@@ -1,17 +1,22 @@
-#project-container, #aboutme {
+#project-container,
+#aboutme {
   margin: 0 auto;
   width: 90%;
   max-width: 600px;
   color: #ffffff;
-  font-family: bungeeparagraph;
+  font-family: Bungeeregular;
+  letter-spacing: 2px;
+  font-size: 15px;
 }
+
 html {
   height: 100%;
   width: 100%;
 }
 
 body {
-  background-image: url('img/backgroundimage/190738-dark-blue-gradient-background.jpg');
+  /* background-image: url('img/backgroundimage/190738-dark-blue-gradient-background.jpg'); */
+  background-color: #91908c;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: sans-serif;
@@ -59,19 +64,21 @@ a:hover {
   border-bottom: 1px solid rgb(0, 174, 255);
 }
 
-/*.project iframe {
+.project iframe {
   width: 250px;
   float: left;
   margin-right: 10px;
   margin-bottom: 10px;
-}*/
+}
 
-.project h2, #aboutme h2 {
+.project h2,
+#aboutme h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
 
-.project img, #aboutme img {
+.project img,
+#aboutme img {
   width: 250px;
   float: left;
   margin-right: 10px;
@@ -87,16 +94,28 @@ a:hover {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
-  font-family: Bungee; 
+  font-family: Bungeeoutline;
   color: #FFFFFF;
 }
 
 @font-face {
-  font-family: CustomFont;
-  src: url('bungeefonts/Bungee-Outline.woff2') format('woff2');
-       url('bungeefonts/Bungee-Hairline.woff2') format('woff2');
-} 
+  font-family: Bungeeoutline;
+  src: url('bungeefonts/Bungee-Outline.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: Bungeeregular;
+  src: url('bungeefonts/Bungee-Regular.woff2') format('woff2');
+}
 
 .links {
   text-align: center;
+}
+
+.scratchembed {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  width: 200px;
+  height: 275px;
 }
