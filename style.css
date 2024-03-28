@@ -150,3 +150,7 @@ h3 {
   border-top: 1px solid white;
   margin-bottom: 10px;
 }
+
+video {
+  display: none;
+}
