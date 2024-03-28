@@ -26,76 +26,78 @@
     <h2>AI Model</h2>
     <h3>Reconizes a calculator or pen</h3>
     <div id="ai-code">
-      <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/addons/p5.dom.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/ml5@latest/dist/ml5.min.js"></script>
-      <script type="text/javascript">
-        // Classifier Variable
-        let classifier;
-        // Model URL
-        let imageModelURL = 'https://teachablemachine.withgoogle.com/models/rKLTU8i2I/';
-
-        // Video
-        let video;
-        let flippedVideo;
-        // To store the classification
-        let label = "";
-
-        let result = document.getElementById("result");
-
-        // Load the model first
-        function preload() {
-          classifier = ml5.imageClassifier(imageModelURL + 'model.json');
-        }
-
-        function setup() {
-          createCanvas(320, 260);
-          // Create the video
-          video = createCapture(VIDEO);
-          video.size(320, 240);
-          video.hide();
-
-          flippedVideo = ml5.flipImage(video);
-          // Start classifying
-          classifyVideo();
-        }
-
-        function draw() {
-          background(0);
-          // Draw the video
-          image(flippedVideo, 0, 0);
-
-          // Draw the label
-          fill(255);
-          textSize(16);
-          textAlign(CENTER);
-          text(`You are holding up a ${label}`, width / 2, height - 4);
-          result.textContent = `You are holding up a ${label}`;
-        }
-
-        // Get a prediction for the current video frame
-        function classifyVideo() {
-          flippedVideo = ml5.flipImage(video)
-          classifier.classify(flippedVideo, gotResult);
-          flippedVideo.remove();
-        }
-
-        // When we get a result
-        function gotResult(error, results) {
-          // If there is an error
-          if (error) {
-            console.error(error);
-            return;
-          }
-          // The results are in an array ordered by confidence.
-          label = results[0].label;
-          // Classifiy again!
-          classifyVideo();
-        }
-      </script>
       <p id="result"></p>
     </div>
   </div>
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/addons/p5.dom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ml5@latest/dist/ml5.min.js"></script>
+  <script type="text/javascript">
+    // Classifier Variable
+    let classifier;
+    // Model URL
+    let imageModelURL = 'https://teachablemachine.withgoogle.com/models/rKLTU8i2I/';
 
+    // Video
+    let video;
+    let flippedVideo;
+    // To store the classification
+    let label = "";
+    let result = document.getElementById('result');
+
+    // Load the model first
+    function preload() {
+      classifier = ml5.imageClassifier(imageModelURL + 'model.json');
+    }
+
+    function setup() {
+      createCanvas(320, 260);
+      // Create the video
+      video = createCapture(VIDEO);
+      video.size(320, 240);
+      video.hide();
+      video.style('textAlign', 'center');
+      flippedVideo = ml5.flipImage(video);
+      // Start classifying
+      classifyVideo();
+    }
+
+    function draw() {
+      background(0);
+      // Draw the video
+      image(flippedVideo, 0, 0);
+      // Draw the label
+      fill(255);
+      textSize(16);
+      textAlign(CENTER);
+      if (label == "Patch") {
+        result.textContent = `You are holding the seceret which is a ${label} good job.`;
+      } else if(label != "Patch"|| "Pen"|| "Calculator") {
+        result.textContent = "You are not holding a valid item regonized by the AI.";
+      } else {
+         result.textContent = `You are holding a ${label}.`;
+      }
+    };
+
+    // Get a prediction for the current video frame
+    function classifyVideo() {
+      flippedVideo = ml5.flipImage(video)
+      classifier.classify(flippedVideo, gotResult);
+      flippedVideo.remove();
+    }
+
+    // When we get a result
+    function gotResult(error, results) {
+      // If there is an error
+      if (error) {
+        console.error(error);
+        return;
+      }
+      // The results are in an array ordered by confidence.
+      label = results[0].label;
+      // Classify again!
+      classifyVideo();
+    }
+  </script>
+</body>
 </html>
