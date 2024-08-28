@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>William's Projects</title>
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="title"> William's Projects</h1>
+    <nav class="links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>|</li>
+        <!-- <li><a href="aipage.html">AI Model</a></li>
+        <li>|</li> -->
+        <li><a href="apcs.html">AP Comp. Sci.</a></li>
+        <li>|</li>
+        <li><a href="adv.html">Adv. Engin.</a></li>
+        <li>|</li>
+        <li><a href="prgm.html">Prgm. & robot.</a></li>
+        <li>|</li>
+        <li><a href="aboutme.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="project-container">
+    <!-- scratch project 2-->
+    <div class="project">
+      <iframe src="https://scratch.mit.edu/projects/898529023/embed" allowtransparency="true" width="485" height="402"
+        frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <h2><a href="https://scratch.mit.edu/projects/898529023"> Drawing app</a></h2>
+      <p>In the drawing app, the goal was to make an application that could draw different shapes based on the desired
+        amount of sides. More and more goals were added throughout the project that gave even more work, but in the end
+        it added a lot more functionality and usability. I really learned how much math could be used in a simple
+        program like this, a program that people might use and think how simple it is, but in reality it is a lot more
+        complex than it may seem.</p>
+      <div class="clear"></div>
+    </div>
+    <!-- ap create -->
+    <div class="project">
+      
+      <h2>AP create project</h2>
+      <div class="imgdiv">
+        <a href="img/project reference (1)-1.png" target="_blank">
+          <img src="img/project reference (1)-1.png" alt="ap create project code" class="images" id="small-img">
+        </a>
+      </div>
+      <p>
+        For my ap create project I decided to make a password manager that can store a users passwords but to also remove and find their passwords.
+        The hardest part of this project was being able to figure out how to use the built in json package in python and finding out how to create a json file
+        and store those passwords. The main method I used was converting the json file into a python dictionary, then either adding to that dictionary, deleting something
+        at a specific property name, or finding something as a property name and then converts it back to the json file with the new dictionary.
+      </p>
+      <div class="clear"></div>
+    </div>
+    <div class="project">
+      <h2>Pi Pico</h2>
+      <video class="images" controls>
+        <source src="img/videos/pico-project.mp4" type="video/mp4">
+      </video>
+      <p>
+        For this project we used a pi pico which is a mini computer to control a neopixel strip of light. Our goal was to create a functioning stop light
+        that simulates what a stop light would do in terms of light order. We used thonny as the IDE to write our code to the pico which would set the light
+        and wait 3 seconds before changing it to something else.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

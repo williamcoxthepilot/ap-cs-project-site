@@ -1,2 +1,2 @@
-# ap-cs-project-site
-Some project I've done in AP CS
+# Peronal website
+This website was made with html and css to show off projects I have done in class.

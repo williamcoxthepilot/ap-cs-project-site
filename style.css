@@ -3,11 +3,11 @@
 #ghcontent {
   margin: 0 auto;
   width: 90%;
-  max-width: 600px;
+  max-width: 1000px;
   color: #ffffff;
-  font-family: Bungeeregular;
+  font-family: Rubik, sans-serif;
   letter-spacing: 2px;
-  font-size: 15px;
+  font-size: 15px; 
 }
 
 html {
@@ -16,10 +16,27 @@ html {
 }
 
 body {
-  background-color: #6b6b6b;
+  background-color: #121212;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: sans-serif;
+}
+
+@font-face {
+  font-family: Bungeeoutline;
+  src: url('bungeefonts/Bungee-Outline.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: Bungeeregular;
+  src: url('bungeefonts/Bungee-Regular.woff2') format('woff2');
+}
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 header {
@@ -29,8 +46,8 @@ header {
 }
 
 .images {
-  width: 60%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   display: block;
   margin: 0 auto;
   padding-bottom: 20px;
@@ -51,13 +68,7 @@ a {
 }
 
 a:hover {
-  color: rgb(20, 151, 226);
-}
-
-.scratchgame {
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 20px;
+  color: #03dac6;
 }
 
 .project {
@@ -67,9 +78,11 @@ a:hover {
 }
 
 .project iframe {
-  width: 250px;
-  float: left;
-  margin-right: 10px;
+  display: block;
+  padding-bottom: 20px;
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
   margin-bottom: 10px;
 }
 
@@ -82,9 +95,9 @@ a:hover {
 
 .project img,
 #aboutme img {
-  width: 300px;
-  float: left;
-  margin-right: 10px;
+  width: 450px;
+  display: inline-block;
+  margin: 0 5px;
   margin-bottom: 10px;
 }
 
@@ -101,30 +114,12 @@ a:hover {
   color: #FFFFFF;
 }
 
-@font-face {
-  font-family: Bungeeoutline;
-  src: url('bungeefonts/Bungee-Outline.woff2') format('woff2'),
-}
-
-@font-face {
-  font-family: Bungeeregular;
-  src: url('bungeefonts/Bungee-Regular.woff2') format('woff2');
-}
-
 .links {
   text-align: center;
 }
 
 .links li {
   color: white;
-}
-
-.scratchembed {
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  width: 200px;
-  height: 275px;
 }
 
 #ai-code {
@@ -134,8 +129,9 @@ a:hover {
 }
 
 h2 {
+  font-family: Bungeeregular, sans-serif;
   text-align: center;
-  font-size: 50px;
+  font-size: 0px;
   margin-bottom: 10px;
 }
 
@@ -156,4 +152,14 @@ h3 {
 
 #small-img:hover {
   cursor: zoom-in;
+}
+
+#multiimg {
+  display: flex;
+  justify-content: center;
+}
+
+.imgdiv {
+  display: flex;
+  justify-content: center;
 }
