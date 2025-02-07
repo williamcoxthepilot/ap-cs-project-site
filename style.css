@@ -53,6 +53,14 @@ header {
   padding-bottom: 20px;
 }
 
+#video {
+  width: 40%;
+  height: 30%;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
 header h1 {
   font-size: 2em;
 }
