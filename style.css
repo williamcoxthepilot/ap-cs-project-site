@@ -162,7 +162,7 @@ h3 {
   cursor: zoom-in;
 }
 
-#multiimg {
+.multiimg {
   display: flex;
   justify-content: center;
 }
